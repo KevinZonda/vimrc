@@ -21,9 +21,10 @@ map R :source $MYVIMRC<CR>
 noremap <LEADER><CR> :nohlsearch
 
 " Split Screen
-noremap <LEADER><Up> :split
-noremap <LEADER><Left> :vsplit
-
+noremap <LEADER><Up> :set nosplitbelow<CR>:split<CR>
+noremap <LEADER><Down> :set splitbelow<CR>:split<CR>
+noremap <LEADER><Left> :set nosplitright<CR>:vsplit<CR>
+noremap <LEADER><Right> :set splitright<CR>:vsplit<CR>
 " Plugin Section
 call plug#begin()
 
